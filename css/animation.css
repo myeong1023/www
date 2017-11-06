@@ -1,0 +1,46 @@
+@charset "utf-8";
+@keyframes text {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    font-size: 30px;
+    opacity: 1;
+    color: rgba(0, 0, 0, 1);
+    transform: translate(200px, 50px);
+  }
+}
+
+.text {
+  background-color: pink;
+  height: 200px;
+}
+
+.text span {
+  background-color: yellow;
+  position: absolute;
+  opacity: 0;
+  animation-name: text;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+}
+
+
+/* 트랜지션 애니메이션 */
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  transition: all 0.5s
+}
+
+.circle:hover {
+  border-radius: 50%;
+}
